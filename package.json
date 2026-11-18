@@ -1,0 +1,27 @@
+{
+  "name": "kendal-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "cloud-list": "zsh scripts/cloud-probe.zsh --list",
+    "cloud-probe": "zsh scripts/cloud-probe.zsh",
+    "probe": "node dist/index.js --probe",
+    "test": "npm run build && node --test test/*.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "homebridge-ac-freedom": "2.3.8",
+    "homebridge-aux-cloud": "0.0.13",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "5.9.3"
+  }
+}
